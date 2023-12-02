@@ -6,6 +6,7 @@ on:
 
 jobs:
     typecheck:
+        name: 'Typecheck'
         runs-on: ubuntu-latest
     
         steps:
