@@ -30,6 +30,7 @@ jobs:
     playwright:
         name: 'Playwright Tests'
         timeout-minutes: 60
+        needs: typecheck
         runs-on: ubuntu-latest
 
         steps:
