@@ -27,8 +27,8 @@ jobs:
           - name: Run type checking
             run: npm run typecheck
             
-    run-tests:
-        needs: typecheck
+    playwright:
+        name: 'Playwright Tests'
         timeout-minutes: 60
         runs-on: ubuntu-latest
 
@@ -47,7 +47,7 @@ jobs:
         - name: Install Playwright Browsers
           run: npx playwright install --with-deps
 
-        - name: Run Playwright tests
+        - name: Run tests
           run: npx playwright test
           
         - uses: actions/upload-artifact@v3
