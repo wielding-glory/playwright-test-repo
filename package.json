@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint ./tests --fix"
+    "lint": "npx eslint ./tests --fix",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
