@@ -1,12 +1,8 @@
-name: Main process
+name: Run autotests
 
 on:
     push:
-      branches:
-        - '*'
-    pull_request:
-      branches:
-        - '*'
+        branches: 'master'
 
 jobs:
     typecheck:
