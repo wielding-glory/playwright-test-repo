@@ -17,6 +17,12 @@ class SearchModalPopupChecks {
         });
     }
 
+    public async isHidden() {
+        await test.step('Проверить, что модального окна поиска нет на странице', async () => {
+            await expect(this.searchModalPopupLocators.popup()).toBeHidden();
+        });
+    }
+
     public async searchInputFilledWithText(searchText: string) {
         await test.step(`Проверить, что поле поиска заполнено текстом ${searchText}`, async () => {
             await expect(this.searchModalPopupLocators.searchInput()).toHaveAttribute('value', searchText);

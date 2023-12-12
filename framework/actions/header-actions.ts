@@ -2,11 +2,9 @@ import { Page, test } from "@playwright/test";
 import { HeaderLocators, LinkNames, SearchModalPopupLocators } from "../locators/header-locators.ts";
 
 class SearchModalPopupActions {
-    private page: Page;
     public searchModalPopupLocators: SearchModalPopupLocators;
   
     constructor(page: Page) {
-      this.page = page;
       this.searchModalPopupLocators = new SearchModalPopupLocators(page);
     }
   
