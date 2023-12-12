@@ -30,7 +30,7 @@ class SearchModalPopupChecks {
     }
 
     public async titleContainText(text: string) {
-        await test.step(`Проверить, что в пути найденных совпадений в поиске текст: "${text}"`, async () => {
+        await test.step(`Проверить, что в заголовках найденных совпадений в поиске содержится текст: "${text}"`, async () => {
             for (const title of await this.searchModalPopupLocators.itemsTitle().all()) {
                 await expect(title).toContainText(text);
             }
