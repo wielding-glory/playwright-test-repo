@@ -8,6 +8,12 @@ test('Checking the operation of the search input via Keyboard', async ({ page })
 
   await page.goto('/');
   await page.waitForTimeout(1000);
+  /*
+  The playwright does not allow you to immediately press the keyboard shortcut "Control+K", so you need to wait.
+  Explicit waits waitForLoadState('domcontentloaded') and waitForLoadState('load') do not help.
+  waitForLoad State('networkidle') helps, but is not recommended by Playwright.
+  So a one-second wait is used in this place as a workaround.
+  */
   await page.keyboard.press('Control+K');
   await headerChecks.searchModalPopupChecks.isVisible();
   await headerChecks.searchModalPopupChecks.searchInputFilledWithText('');
