@@ -77,6 +77,4 @@ jobs:
         - name: Run your tests
           run: npx playwright test
           env:
-            HOME: /root
-            
-      
+            HOME: "/root"
